@@ -162,6 +162,7 @@ padding-inline: 15px 5px;
 }
 
 .tag {
+    overflow: auto;
     height: 30px;
     margin-bottom: 25px;
     display: flex;
@@ -183,7 +184,7 @@ padding-inline: 15px 5px;
 .vidpanel {
     display: flex;
     flex-flow: row wrap;
-    height: 85vh;
+    height: 83vh;
     overflow: auto;
     
 }
