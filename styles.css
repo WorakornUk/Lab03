@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    --header : 60px;
+    --sidebar : 250px;
+}
+body {
+    margin-inline: 20px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+hr {
+    border: 1px solid rgba(128, 128, 128, 0.084);
+    margin: 10px 0px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: var(--header);
+    margin-bottom: 15px;
+}
+nav i {
+    font-size: 30px;
+} 
+p.logo {
+    display: inline;
+    font-size: 22px;
+    letter-spacing: 0px;
+}
+
+nav .L {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav .fa-bars {
+    font-size: 20px;
+    margin-inline: 15px 20px;
+}
+.TM {
+    display: flex;
+    align-items: flex-start;
+    height: 80%;
+    font-size: 10px;
+    letter-spacing: -1px;
+}
+
+nav .M {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    flex-basis: 40%;
+}
+.searchbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    border: 1.5px #00000015 solid;
+}
+.searchbox.L {
+    width: 80%;
+    border-radius: 30px 0px 0px 30px;
+    border-right: none;
+    justify-content: center;
+}
+.searchbox.R {
+    flex-shrink: 0;
+    width: 75px;
+    border-radius: 0px 30px 30px 0px;
+    background: #ebebeb8b;
+    margin-right: 20px;
+}
+.searchbox.L input {
+    width: 80%;
+    height: 80%;
+    border: none;
+    outline: none;
+}
+.searchbox.R i {
+    font-size: 20px;
+}
+i.fa-microphone {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+    background-color: #ebebeb8b;
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav .R {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.R i {
+    font-size: 20px;
+    margin: 15px;
+}
+
+i .fa-circle {
+    margin-right: 50px;
+}
+
+main {
+    /* min-height: calc(100vh - 15px - var(--header)); */
+    display: flex;
+}
+.sidebar {
+    width: var(--sidebar);
+    display: flex;
+    flex-flow: column;
+    
+}
+.sidelist {
+    height: 40px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.sidebar a {
+    width: 88%;
+
+}
+.sidebar a:hover {
+    background: #bfbfbf30;
+    border-radius: 5px;
+}
+.sidebar a.current:hover {
+    background: #bfbfbf61;
+    border-radius: 5px;
+}
+.sidebar a.current {
+    background: #bfbfbf30;
+    border-radius: 5px;
+    font-weight: bol;
+}
+.sidelist i {
+margin-right: 20px;
+padding-inline: 15px 5px;
+}
+.sidelist p {
+    font-size: 0.8em;
+}
+
+.content {
+    width: calc(100% - var(--sidebar));
+}
+
+.tag {
+    height: 30px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-flow: nowrap;
+}
+.tag a {
+    background: #bfbfbf30;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-inline-end: 8px;
+}
+.tag a.current {
+    background: black;
+    color: white;
+}
+.tag a:hover {
+    background: #bfbfbf60;
+}
+.vidpanel {
+    display: flex;
+    flex-flow: row wrap;
+    height: 85vh;
+    overflow: auto;
+    
+}
+.vid {
+    display: flex;
+    flex-flow: column;
+    height: 330px;
+    width: 350px;
+    margin: 10px 10px 0px 10px;
+    flex-shrink: 0;
+}
+.preview img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    margin-bottom: 13px;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.info img {
+    width: 36px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+.infotext {
+    display: flex;
+    flex-flow: column;
+}
+.infotext h3 {
+    font-weight: 600;
+    font-size: medium;
+    margin-bottom: 7px;
+}
+.infotext em {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.infotext span{
+    font-weight: bold;
+    font-size: 0.8em;
+    color: black;
+}
+.infotext i {
+font-size: 12px;
+margin-left: 5px;
+}
+.infotext p {
+    font-size: 0.9em;
+    color: grey;
+}
+
+@media(max-width: 600px) {
+    .M {
+        justify-content: flex-end;
+    }
+    .searchbox.L {
+        display: none;
+    }
+    .searchbox.R {
+        border: none;
+        background: none;
+        margin: 0px;
+    }
+    i.fa-microphone {
+        font-size: 17px;
+        flex-shrink: 0;
+        background: none;
+    }
+    .sidebar p {
+        display: none;
+    }
+    html {
+        --sidebar : 55px
+    }
+}
+/* 
+@media(max-width: 1024) {
+    main {
+        min-height: calc(100vh - 50px - var(--header));
+    }
+} */
