@@ -44,6 +44,14 @@ nav .fa-bars {
     font-size: 20px;
     margin-inline: 15px 20px;
 }
+nav .fa-bars:hover {
+    animation: rot ;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+@keyframes rot {
+    to {rotate: 90deg}
+}
 .TM {
     display: flex;
     align-items: flex-start;
@@ -162,12 +170,16 @@ padding-inline: 15px 5px;
 }
 
 .tag {
-    overflow: auto;
     height: 30px;
     margin-bottom: 25px;
     display: flex;
     flex-flow: nowrap;
+    overflow: scroll;
 }
+.tag::-webkit-scrollbar {
+    display: none;
+}
+
 .tag a {
     background: #bfbfbf30;
     padding: 5px 10px;
